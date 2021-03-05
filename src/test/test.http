@@ -1,0 +1,29 @@
+POST http://localhost:8080/hotel
+Content-Type: application/json
+
+{
+  "name": "Hyatt Regency"
+}
+
+###
+GET http://localhost:8080/hotel/1
+###
+PUT http://localhost:8080/hotel/1
+Content-Type: application/json
+
+{
+  "name": "City Palace"
+}
+
+###
+POST http://localhost:8080/room
+Content-Type: application/json
+
+{
+  "roomNumber": 72,
+  "floor": "12",
+  "size": "125m2",
+  "hotelId": 1
+}
+###
+GET http://localhost:8080/room/byHotelId/1?page=0
